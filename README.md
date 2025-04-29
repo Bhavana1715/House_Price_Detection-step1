@@ -31,6 +31,7 @@ Analyze temporal (year-based) trends.
 Study relationships between independent features and SalePrice.
 
 🔍 𝗞𝗲𝘆 𝗦𝘁𝗲𝗽𝘀 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗲𝗱
+
 ✅ Data Loading and Setup
 Loaded the dataset using pandas.
 
@@ -59,12 +60,19 @@ Discrete Features: Few unique values, visualized using bar plots.
 Continuous Features: Broad value range, visualized with histograms.
 
 📌 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗲𝘀 𝗨𝘀𝗲𝗱
+
 python
+
 pandas        # For data manipulation
+
 numpy         # For numerical operations
+
 matplotlib    # For plotting
+
 seaborn       # For advanced visualizations
+
 📈 𝗦𝗮𝗺𝗽𝗹𝗲 𝗩𝗶𝘀𝘂𝗮𝗹𝘀
+
 Missing Value Impact
 
 Median SalePrice per Feature
@@ -78,6 +86,7 @@ Bar Charts: Discrete Features vs SalePrice
 Histograms: Continuous Features
 
 📌 𝗢𝗯𝘀𝗲𝗿𝘃𝗮𝘁𝗶𝗼𝗻𝘀
+
 Missing values can significantly influence SalePrice and must be treated thoughtfully.
 
 Some year-related features, when transformed, show strong trends with price.
@@ -87,6 +96,7 @@ Discrete features like OverallQual, OverallCond, etc., have strong predictive po
 Continuous features vary widely in distribution and require normalization/scaling later.
 
 📦 𝗡𝗲𝘅𝘁 𝗦𝘁𝗲𝗽𝘀
+
 Handle missing values smartly (based on their observed impact).
 
 Perform feature engineering on temporal and categorical variables.
@@ -94,4 +104,5 @@ Perform feature engineering on temporal and categorical variables.
 Prepare data for machine learning models.
 
 🙌 𝗔𝘂𝘁𝗵𝗼𝗿 𝗡𝗼𝘁𝗲𝘀
+
 This project is a part of my data science journey to understand feature behavior and improve prediction accuracy. Feedback and suggestions are always welcome!
