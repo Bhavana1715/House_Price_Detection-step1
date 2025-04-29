@@ -1,7 +1,9 @@
 🏡🏡 𝐇𝐨𝐮𝐬𝐞 𝐏𝐫𝐢𝐜𝐞𝐬 𝐄𝐃𝐀 – 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐢𝐬 𝐏𝐡𝐚𝐬𝐞
+
 Welcome to the exploratory data analysis (EDA) phase of the House Prices - Advanced Regression Techniques project. This notebook is focused on understanding the structure, patterns, and relationships within the data to lay a solid foundation for the upcoming feature engineering and model building phases.
 
 📂 𝐃𝐚𝐭𝐚𝐬𝐞𝐭 𝐔𝐬𝐞𝐝
+
 File: train.csv
 
 Source: Kaggle - House Prices: Advanced Regression Techniques
@@ -13,6 +15,7 @@ Columns: 81
 Target Variable: SalePrice
 
 📊 𝗢𝗯𝗷𝗲𝗰𝘁𝗶𝘃𝗲𝘀 𝗼𝗳 𝗧𝗵𝗶𝘀 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀
+
 Identify and visualize missing values.
 
 Understand numerical and categorical features.
