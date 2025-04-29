@@ -1,108 +1,95 @@
-🏡🏡 𝐇𝐨𝐮𝐬𝐞 𝐏𝐫𝐢𝐜𝐞𝐬 𝐄𝐃𝐀 – 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐢𝐬 𝐏𝐡𝐚𝐬𝐞
+# 🏡 House Prices EDA – Data Analysis Phase
 
-Welcome to the exploratory data analysis (EDA) phase of the House Prices - Advanced Regression Techniques project. This notebook is focused on understanding the structure, patterns, and relationships within the data to lay a solid foundation for the upcoming feature engineering and model building phases.
+Welcome to the exploratory data analysis (EDA) phase of the **House Prices - Advanced Regression Techniques** project. This notebook is focused on understanding the structure, patterns, and relationships within the data to lay a solid foundation for the upcoming feature engineering and model building phases.
 
-📂 𝐃𝐚𝐭𝐚𝐬𝐞𝐭 𝐔𝐬𝐞𝐝
+---
 
-File: train.csv
+## 📂 Dataset Used
 
-Source: Kaggle - House Prices: Advanced Regression Techniques
+- **File:** `train.csv`
+- **Source:** [Kaggle - House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
+- **Rows:** 1460
+- **Columns:** 81  
+- **Target Variable:** `SalePrice`
 
-Rows: 1460
+---
 
-Columns: 81
+## 📊 Objectives of This Analysis
 
-Target Variable: SalePrice
+1. Identify and visualize **missing values**.
+2. Understand **numerical** and **categorical** features.
+3. Explore **distribution patterns** of variables.
+4. Detect **outliers** in numerical variables.
+5. Investigate **cardinality** of categorical features.
+6. Analyze **temporal (year-based)** trends.
+7. Study **relationships** between independent features and `SalePrice`.
 
-📊 𝗢𝗯𝗷𝗲𝗰𝘁𝗶𝘃𝗲𝘀 𝗼𝗳 𝗧𝗵𝗶𝘀 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀
+---
 
-Identify and visualize missing values.
+## 🔍 Key Steps Performed
 
-Understand numerical and categorical features.
+### ✅ Data Loading and Setup
+- Loaded the dataset using `pandas`.
+- Enabled full column visibility and added scrollable DataFrame display.
 
-Explore distribution patterns of variables.
+### 🔎 Missing Values
+- Calculated total and percentage of missing values.
+- Visualized their impact on `SalePrice`.
+- Found that some missing values strongly correlate with price — will be carefully handled during feature engineering.
 
-Detect outliers in numerical variables.
+### 🔢 Numerical Variables
+- Identified all numeric columns.
+- Separated `year` features for further analysis.
 
-Investigate cardinality of categorical features.
+### ⏳ Temporal Variables
+- Investigated the influence of variables like `YearBuilt`, `YearRemodAdd`, etc.
+- Observed relationships with `SalePrice` using scatter plots.
 
-Analyze temporal (year-based) trends.
+### 🧮 Discrete vs Continuous Features
+- **Discrete Features:** Few unique values, visualized using bar plots.
+- **Continuous Features:** Broad value range, visualized with histograms.
 
-Study relationships between independent features and SalePrice.
+---
 
-🔍 𝗞𝗲𝘆 𝗦𝘁𝗲𝗽𝘀 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗲𝗱
+## 📌 Libraries Used
 
-✅ Data Loading and Setup
-Loaded the dataset using pandas.
-
-Enabled full column visibility and added scrollable DataFrame display.
-
-🔎 Missing Values
-Calculated total and percentage of missing values.
-
-Visualized their impact on SalePrice.
-
-Found that some missing values strongly correlate with price — will be carefully handled during feature engineering.
-
-🔢 𝗡𝘂𝗺𝗲𝗿𝗶𝗰𝗮𝗹 𝗩𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀
-Identified all numeric columns.
-
-Separated year features for further analysis.
-
-⏳ 𝗧𝗲𝗺𝗽𝗼𝗿𝗮𝗹 𝗩𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀
-Investigated the influence of variables like YearBuilt, YearRemodAdd, etc.
-
-Observed relationships with SalePrice using scatter plots.
-
-🧮 𝗗𝗶𝘀𝗰𝗿𝗲𝘁𝗲 𝘃𝘀 𝗖𝗼𝗻𝘁𝗶𝗻𝘂𝗼𝘂𝘀 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀
-Discrete Features: Few unique values, visualized using bar plots.
-
-Continuous Features: Broad value range, visualized with histograms.
-
-📌 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗲𝘀 𝗨𝘀𝗲𝗱
-
-python
-
+```python
 pandas        # For data manipulation
-
 numpy         # For numerical operations
-
 matplotlib    # For plotting
-
 seaborn       # For advanced visualizations
+```
 
-📈 𝗦𝗮𝗺𝗽𝗹𝗲 𝗩𝗶𝘀𝘂𝗮𝗹𝘀
+---
 
-Missing Value Impact
+## 📈 Sample Visuals
 
-Median SalePrice per Feature
+- **Missing Value Impact**
+- **Median SalePrice per Feature**
+- **Year Sold vs SalePrice Line Plot**
+- **Scatter Plots: Year Features vs SalePrice**
+- **Bar Charts: Discrete Features vs SalePrice**
+- **Histograms: Continuous Features**
 
-Year Sold vs SalePrice Line Plot
+---
 
-Scatter Plots: Year Features vs SalePrice
+## 📌 Observations
 
-Bar Charts: Discrete Features vs SalePrice
+- Missing values can significantly influence `SalePrice` and must be treated thoughtfully.
+- Some year-related features, when transformed, show strong trends with price.
+- Discrete features like `OverallQual`, `OverallCond`, etc., have strong predictive potential.
+- Continuous features vary widely in distribution and require normalization/scaling later.
 
-Histograms: Continuous Features
+---
 
-📌 𝗢𝗯𝘀𝗲𝗿𝘃𝗮𝘁𝗶𝗼𝗻𝘀
+## 📦 Next Steps
 
-Missing values can significantly influence SalePrice and must be treated thoughtfully.
+- Handle missing values smartly (based on their observed impact).
+- Perform feature engineering on temporal and categorical variables.
+- Prepare data for machine learning models.
 
-Some year-related features, when transformed, show strong trends with price.
+---
 
-Discrete features like OverallQual, OverallCond, etc., have strong predictive potential.
-
-Continuous features vary widely in distribution and require normalization/scaling later.
-
-📦 𝗡𝗲𝘅𝘁 𝗦𝘁𝗲𝗽𝘀
-
-Handle missing values smartly (based on their observed impact).
-
-Perform feature engineering on temporal and categorical variables.
-
-Prepare data for machine learning models.
-
-🙌 𝗔𝘂𝘁𝗵𝗼𝗿 𝗡𝗼𝘁𝗲𝘀
+## 🙌 Author Notes
 
 This project is a part of my data science journey to understand feature behavior and improve prediction accuracy. Feedback and suggestions are always welcome!
